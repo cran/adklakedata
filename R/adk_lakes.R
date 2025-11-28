@@ -1,9 +1,5 @@
-#' @title List of lakes with attributes
-#'
-#'
-#' @description
-#' Returns a data.frame of lake info. Includes common info like
-#' lake location (lat/lon), lake name, and numerical site ID.
+#' @title Load the lake shapefile for ADK
+#' @description This function loads the primary geospatial boundary data for the Adirondack parks.
 #'
 #'
 #'

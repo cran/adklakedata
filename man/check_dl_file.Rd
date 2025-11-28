@@ -4,8 +4,7 @@
 \alias{check_dl_file}
 \title{Verify and download data files}
 \usage{
-check_dl_file(master_file, fname = NULL, md5check = TRUE,
-  dest = local_path())
+check_dl_file(master_file, fname = NULL, md5check = TRUE, dest = local_path())
 }
 \arguments{
 \item{master_file}{Character path to master file}

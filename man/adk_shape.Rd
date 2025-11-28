@@ -12,11 +12,13 @@ outline (The "Blue Line"). Returns the path to a locally stored shapefile
 that can be used for mapping and analysis.
 }
 \examples{
-library(sf)
-bl = read_sf(adklakedata::adk_shape())
-lakes = read_sf(adklakedata::adk_lake_shapes())
+\dontrun{
+#' library(sf)
+bl = sf::read_sf(adklakedata::adk_shape())
+lakes = sf::read_sf(adklakedata::adk_lake_shapes())
 plot(st_geometry(bl))
 plot(st_geometry(lakes), add=TRUE, col='blue')
+}
 
 
 }

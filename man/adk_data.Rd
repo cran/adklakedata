@@ -7,7 +7,7 @@
 adk_data(data_name)
 }
 \arguments{
-\item{data_name}{A string choosing the data to load. 
+\item{data_name}{A string choosing the data to load.
 \tabular{ll}{
 \strong{Data name (data_name)} \tab \strong{Data Description} \cr
 chem \tab Lake Chemistry \cr

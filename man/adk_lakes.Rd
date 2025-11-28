@@ -2,13 +2,12 @@
 % Please edit documentation in R/adk_lakes.R
 \name{adk_lakes}
 \alias{adk_lakes}
-\title{List of lakes with attributes}
+\title{Load the lake shapefile for ADK}
 \usage{
 adk_lakes()
 }
 \description{
-Returns a data.frame of lake info. Includes common info like
-lake location (lat/lon), lake name, and numerical site ID.
+This function loads the primary geospatial boundary data for the Adirondack parks.
 }
 \examples{
 \dontrun{

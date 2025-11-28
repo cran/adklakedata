@@ -5,15 +5,15 @@ filenames = c("chem" = "data/waterchem.csv",
               "phyto" = "data/phyto.csv",
               "rotifer" = "data/rotifer.csv",
               "secchi" = "data/secchi.csv",
-              "tempdo" = "data/temp_do_profiles.csv", 
+              "tempdo" = "data/temp_do_profiles.csv",
               "met" = "data/nldas_drivers_1979_2016.csv")
 
 #' @title Load ADK Data
-#' 
-#' @description 
+#'
+#' @description
 #' Loads data from locally downloaded CSV files. Run \code{\link{check_dl_data}} before using this function.
-#' 
-#' @param data_name A string choosing the data to load. 
+#'
+#' @param data_name A string choosing the data to load.
 #' \tabular{ll}{
 #' \strong{Data name (data_name)} \tab \strong{Data Description} \cr
 #' chem \tab Lake Chemistry \cr
@@ -27,12 +27,12 @@ filenames = c("chem" = "data/waterchem.csv",
 #' met    \tab Lake-specific Meterology (air temp, wind, precip, etc) \cr
 #' }
 #'
-#' 
-#' @import utils 
-#' 
-#' @examples 
+#'
+#' @import utils
+#'
+#' @examples
 #' \dontrun{
-#' 
+#'
 #' #grab secchi data and plot it
 #' secchi = adk_data('secchi')
 #' plot(as.POSIXct(secchi$date), secchi$secchi)
@@ -43,6 +43,5 @@ adk_data = function(data_name){
   data_name = match.arg(data_name, names(filenames))
   path = local_path()
   check_dl_data()
-  
-  return(read.csv(file.path(local_path(), filenames[[data_name]])))
+  return(tibble::as_tibble(read.csv(file.path(local_path(), filenames[[data_name]]))))
 }
