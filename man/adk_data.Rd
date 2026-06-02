@@ -23,6 +23,14 @@ met    \tab Lake-specific Meterology (air temp, wind, precip, etc) \cr
 }
 \description{
 Loads data from locally downloaded CSV files. Run \code{\link{check_dl_data}} before using this function.
+
+The package presents data for the 28 original lakes covered by both the
+AEAP and ALTM monitoring programs, matching the scope of Farrell et al.
+(2018, \emph{Scientific Data}, \doi{10.1038/sdata.2018.59}). The
+underlying figshare archive (\doi{10.6084/m9.figshare.32305479}) additionally
+contains chemistry and nutrient records for 25 ALTM-only lakes; those records
+are filtered out by this function but are available directly from figshare
+if needed.
 }
 \examples{
 \dontrun{
